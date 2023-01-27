@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using Project.Scripts.Game.Screens.LoadingScreen.Areas.Ui.Presenters;
+using Zenject;
 
 namespace Project.Scripts.Game.Screens.LoadingScreen
 {
@@ -7,6 +8,7 @@ namespace Project.Scripts.Game.Screens.LoadingScreen
         public override void InstallBindings()
         {
             Container.Bind<LoadingScreen>().AsSingle();
+            Container.Bind<LoadingUiPresenter>().AsSingle();
         }
     }
 }

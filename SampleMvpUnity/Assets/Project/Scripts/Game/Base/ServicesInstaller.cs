@@ -1,4 +1,5 @@
-﻿using Project.Scripts.Core.Services.Coroutine;
+﻿using Core.Content;
+using Project.Scripts.Core.Services.Coroutine;
 using Project.Scripts.Core.Services.Logger;
 using Project.Scripts.Core.Services.Screen;
 using Project.Scripts.Game.Screens.LoadingScreen;
@@ -14,6 +15,7 @@ namespace Project.Scripts.Game.Base
             Container.BindInterfacesTo<UnityLoggerService>().AsSingle();
             Container.BindInterfacesTo<ScreensService>().AsSingle();
             Container.Bind<string>().FromInstance(LoadingScreen.Id).WhenInjectedInto<ScreensService>();
+            Container.BindInterfacesTo<ContentService>().AsSingle();
         }
     }
 }
